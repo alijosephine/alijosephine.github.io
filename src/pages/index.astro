@@ -28,7 +28,7 @@ const posts = (await getCollection('blog')).sort(
 
       .banner {
         width: 100%;
-        height: 260px;
+        height: 180px;
         object-fit: cover;
         object-position: center;
         display: block;
@@ -113,12 +113,12 @@ const posts = (await getCollection('blog')).sort(
     <section id="bio">
       <h2>About</h2>
       <p>
-        I am an ML Engineer and Researcher at <a href="https://www.helmholtz-munich.de" target="_blank" rel="noopener">Helmholtz Munich</a>, affiliated with <a href="https://www.helmholtz.ai" target="_blank" rel="noopener">Helmholtz AI</a> and <a href="https://www.tum.de" target="_blank" rel="noopener">TU Munich</a>. Previously, I worked at <a href="https://www.cispa.de" target="_blank" rel="noopener">CISPA</a>, <a href="https://www.intuit.com" target="_blank" rel="noopener">Intuit</a>, and <a href="https://www.interviewkickstart.com" target="_blank" rel="noopener">Interview Kickstart</a>.
+        I am a Machine Learning Engineer and Researcher at <a href="https://www.helmholtz-munich.de" target="_blank" rel="noopener">Helmholtz Munich</a> / <a href="https://www.helmholtz.ai" target="_blank" rel="noopener">Helmholtz AI</a> (also affiliated with <a href="https://www.tum.de" target="_blank" rel="noopener">TU Munich</a>). Previously, I worked at <a href="https://www.cispa.de" target="_blank" rel="noopener">CISPA</a>, <a href="https://www.intuit.com" target="_blank" rel="noopener">Intuit</a>, and <a href="https://www.interviewkickstart.com" target="_blank" rel="noopener">Interview Kickstart</a>.
       </p>
     </section>
 
     <section id="blog">
-      <h2>Writing</h2>
+      <h2>Writings</h2>
       {posts.length > 0 ? (
         <ul class="blog-list">
           {posts.map(post => (
