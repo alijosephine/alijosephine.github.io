@@ -24,9 +24,12 @@ const posts = (await getCollection('blog')).sort(
         line-height: 1.7;
         color: #222;
         background: #fff;
+      }
+
+      .wrapper {
         max-width: 680px;
         margin: 0 auto;
-        padding: 4rem 1.5rem 7rem;
+        padding: 4rem 2rem 7rem;
       }
 
       a { color: rgb(13, 60, 120); text-decoration: none; }
@@ -64,47 +67,6 @@ const posts = (await getCollection('blog')).sort(
       p { margin-bottom: 0.9rem; }
       p:last-child { margin-bottom: 0; }
 
-      /* Publications */
-      .pub-list { list-style: none; }
-
-      .pub {
-        margin-bottom: 1.4rem;
-      }
-
-      .pub-title { font-style: italic; }
-
-      .pub-authors {
-        font-size: 0.88rem;
-        color: #555;
-        margin-top: 0.15rem;
-      }
-
-      .pub-meta {
-        font-size: 0.88rem;
-        color: #666;
-        margin-top: 0.1rem;
-      }
-
-      .pub-meta .venue { font-weight: bold; color: #444; }
-
-      .pub-meta .tag {
-        display: inline-block;
-        font-size: 0.75rem;
-        font-weight: normal;
-        font-style: normal;
-        background: #f0f0f0;
-        color: #555;
-        border-radius: 3px;
-        padding: 0.05em 0.45em;
-        margin-left: 0.3rem;
-        vertical-align: middle;
-      }
-
-      /* Projects */
-      .project { margin-bottom: 1.1rem; }
-      .project-name { font-weight: bold; }
-      .project-desc { color: #555; }
-
       /* Blog */
       .blog-list { list-style: none; }
 
@@ -131,6 +93,7 @@ const posts = (await getCollection('blog')).sort(
     </style>
   </head>
   <body>
+    <div class="wrapper">
 
     <h1>Aleena Siji</h1>
     <div class="nav-links">
@@ -155,59 +118,6 @@ const posts = (await getCollection('blog')).sort(
       </p>
     </section>
 
-    <section id="publications">
-      <h2>Publications</h2>
-      <ul class="pub-list">
-
-        <li class="pub">
-          <div class="pub-title">From Words to Amino Acids: Does the Curse of Depth persist?</div>
-          <div class="pub-authors"><strong>A. Siji</strong>, A. Mamaghan, F. Kapl, T. H&ouml;ppe, E. Angelis, A. Dittadi, M. Brenner, M. Heinzinger, K. Johansson, K. Maile, J. Oswald, S. Bauer</div>
-          <div class="pub-meta">
-            <span class="venue">ICLR 2026</span> Workshop on Learning Meaningful Representations of Life (LMRL'26)
-            <span class="tag">Poster</span>
-          </div>
-        </li>
-
-        <li class="pub">
-          <div class="pub-title">SEQRET: Mining Rule Sets from Event Sequences</div>
-          <div class="pub-authors"><strong>A. Siji</strong>, J. C&uuml;ppers, O. Mian, and J. Vreeken</div>
-          <div class="pub-meta">
-            <span class="venue">AAAI 2026</span> &middot; 40th Annual Conference on Artificial Intelligence
-            <span class="tag">Oral</span>
-          </div>
-        </li>
-
-        <li class="pub">
-          <div class="pub-title">Iterative Oversubscription Planning with Goal-Conflict Explanations</div>
-          <div class="pub-authors">R. Eifler, D. Fi&scaron;er, <strong>A. Siji</strong>, and J. Hoffmann</div>
-          <div class="pub-meta">
-            <span class="venue">ECAI 2024</span> &middot; 27th European Conference on Artificial Intelligence
-            <span class="tag">Poster</span>
-          </div>
-        </li>
-
-      </ul>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-
-      <div class="project">
-        <div class="project-name">Accessible Android Keyboard for Parkinson's Patients</div>
-        <div class="project-desc">
-          Custom Android keyboard with a scanning grid layout, single-tap selection and personalized next-word prediction (built from scratch) to improve accessibility for users with Parkinson's disease.
-        </div>
-      </div>
-
-      <div class="project">
-        <div class="project-name">Electronic Board Games with Arduino</div>
-        <div class="project-desc">
-          Physical board games (Snake and Ladder, Ludo) with LED circuits controlled by an Arduino microcontroller to illuminate player movement in real time.
-        </div>
-      </div>
-
-    </section>
-
     <section id="blog">
       <h2>Writing</h2>
       {posts.length > 0 ? (
@@ -226,5 +136,6 @@ const posts = (await getCollection('blog')).sort(
       )}
     </section>
 
+    </div>
   </body>
 </html>
