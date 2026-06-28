@@ -26,10 +26,18 @@ const posts = (await getCollection('blog')).sort(
         background: #fff;
       }
 
+      .banner {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+
       .wrapper {
         max-width: 680px;
         margin: 0 auto;
-        padding: 4rem 2rem 7rem;
+        padding: 3rem 2rem 7rem;
       }
 
       a { color: rgb(13, 60, 120); text-decoration: none; }
@@ -93,6 +101,7 @@ const posts = (await getCollection('blog')).sort(
     </style>
   </head>
   <body>
+    <img src="/nasa.webp" alt="Pale Blue Dot — NASA/JPL-Caltech" class="banner" />
     <div class="wrapper">
 
     <h1>Aleena Siji</h1>
@@ -104,14 +113,7 @@ const posts = (await getCollection('blog')).sort(
     <section id="bio">
       <h2>About</h2>
       <p>
-        I am an ML Engineer and Researcher at
-        <a href="https://www.helmholtz-munich.de" target="_blank" rel="noopener">Helmholtz Munich</a>,
-        affiliated with <a href="https://www.helmholtz.ai" target="_blank" rel="noopener">Helmholtz AI</a>
-        and <a href="https://www.tum.de" target="_blank" rel="noopener">TU Munich</a>.
-        Previously, I worked at
-        <a href="https://www.cispa.de" target="_blank" rel="noopener">CISPA</a>,
-        <a href="https://www.intuit.com" target="_blank" rel="noopener">Intuit</a>, and
-        <a href="https://www.interviewkickstart.com" target="_blank" rel="noopener">Interview Kickstart</a>.
+        I am an ML Engineer and Researcher at <a href="https://www.helmholtz-munich.de" target="_blank" rel="noopener">Helmholtz Munich</a>, affiliated with <a href="https://www.helmholtz.ai" target="_blank" rel="noopener">Helmholtz AI</a> and <a href="https://www.tum.de" target="_blank" rel="noopener">TU Munich</a>. Previously, I worked at <a href="https://www.cispa.de" target="_blank" rel="noopener">CISPA</a>, <a href="https://www.intuit.com" target="_blank" rel="noopener">Intuit</a>, and <a href="https://www.interviewkickstart.com" target="_blank" rel="noopener">Interview Kickstart</a>.
       </p>
     </section>
 
